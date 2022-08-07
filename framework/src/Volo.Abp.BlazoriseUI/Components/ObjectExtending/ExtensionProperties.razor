@@ -21,11 +21,11 @@
             else
             {
                 var inputType = propertyInfo.GetInputType();
-                __builder.OpenComponent(0, inputType.MakeGenericType(new[] { typeof(TEntityType), typeof(TResourceType) }));
-                __builder.AddAttribute(1, "PropertyInfo", propertyInfo);
-                __builder.AddAttribute(2, "Entity", Entity);
-                __builder.AddAttribute(3, "LH", LH);
-                __builder.CloseComponent();
+                builder.OpenComponent(0, inputType.MakeGenericType(typeof(TEntityType), typeof(TResourceType)));
+                builder.AddAttribute(1, "PropertyInfo", propertyInfo);
+                builder.AddAttribute(2, "Entity", Entity);
+                builder.AddAttribute(3, "LH", LH);
+                builder.CloseComponent();
             }
         }
     }
